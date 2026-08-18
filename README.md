@@ -116,7 +116,7 @@
 - GitHub: @lunadoo0k
 - 이메일: lunadoo.0k@gmail.com
 
-[자세한 조건은 LICENSE 파일을 참고하세요](https://github.com/lunadoo0k/lunadoo0k-smartledger/blob/main/LICENSE)
+[자세한 조건은 LICENSE 파일을 참고하세요](https://github.com/lunadoo0k/lunadoo0k-smartledger/blob/main/LICENSE.md)
 
 ---
 
