@@ -1,5 +1,15 @@
 # 📊 스마트 가계부
 
+## ✨ 최신 업데이트 (2026-08-18)
+
+### 🔧 버그 수정 및 개선
+- ✅ exportData 함수 수정 (usedTrades 데이터 포함)
+- ✅ handleImportFile 함수 수정 (usedTrades 로드 기능)
+- ✅ localStorage key 일치 (smartLedger)
+- ✅ 내보내기/불러오기 기능 완벽 작동
+
+---
+  
 **개발 기간:** 2026-08-13 ~ 2026-08-18  
 **개발자:** (루나) lunadoo0k  
 **라이선스:** 커스텀 라이선스 (판매 금지)
