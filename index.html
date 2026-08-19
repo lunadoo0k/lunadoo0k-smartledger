@@ -3983,7 +3983,7 @@ class SmartLedger {
       // 자산별로 그룹화 (D-day <= 7인 고정비만)
       const assetGroups = {};
       upcoming.forEach(f => {
-        if (f.assetCategory) {  // ✅ D-day <= 7 조건 추가
+        if (f.assetCategory && f.dday <= 7) {  // ✅ D-day <= 7 조건 추가
           if (!assetGroups[f.assetCategory]) {
             assetGroups[f.assetCategory] = [];
           }
