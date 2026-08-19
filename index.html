@@ -3759,7 +3759,7 @@ class SmartLedger {
     const day = parseInt(document.getElementById('fixedDay').value) || 1;
     const assetCategory = document.getElementById('fixedAssetCategory').value || '';
 
-    if (!name || !amount) {
+    if (!name || amount < 0) {
       alert('항목과 금액을 입력하세요');
       return;
     }
@@ -3828,7 +3828,7 @@ class SmartLedger {
     const day = parseInt(document.getElementById('editFixedDay').value) || 1;
     const assetCategory = document.getElementById('editFixedAssetCategory').value || '';
 
-    if (!name || !amount) {
+    if (!name || amount < 0) {
       alert('항목과 금액을 입력하세요');
       return;
     }
