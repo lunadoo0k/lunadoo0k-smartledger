@@ -3860,7 +3860,7 @@ class SmartLedger {
     }
 
     // 자산 데이터 업데이트
-    const assetIndex = this.assets.findIndex(a => a.id == assetId);
+    const assetIndex = this.assets.findIndex(a => a.name === assetName); 
     if (assetIndex !== -1) {
       this.assets[assetIndex].balance = balance;
       this.saveData();
