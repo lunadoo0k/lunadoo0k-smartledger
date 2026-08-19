@@ -4012,11 +4012,12 @@ class SmartLedger {
 
 
         Object.entries(assetGroups).forEach(([assetName, fixedExpenses]) => {
-          const totalAmount = fixedExpenses.reduce((sum, f) => sum + f.amount, 0);
-          const asset = this.assets?.find(a => a.name === assetName);
-          const assetBalance = asset?.balance || 0;
-         const assetId = asset?.id || Date.now();
-          const totalNeedAmount = Math.max(0, totalAmount - assetBalance);
+  const totalAmount = fixedExpenses.reduce((sum, f) => sum + f.amount, 0);
+  const asset = this.assets?.find(a => a.name === assetName);
+  if (!asset) return;  // ✅ 자산이 없으면 스킵
+  const assetBalance = asset.balance || 0;  // ✅ asset은 확실히 있음
+  const assetId = asset.id;  // ✅ Date.now() 제거
+  const totalNeedAmount = Math.max(0, totalAmount - assetBalance);
           
           // 색상 선택 (모든 자산이 동일한 연한 파스텔 분홍색)
           const color = assetColor;
