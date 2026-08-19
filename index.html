@@ -4015,7 +4015,7 @@ class SmartLedger {
           const totalAmount = fixedExpenses.reduce((sum, f) => sum + f.amount, 0);
           const asset = this.assets?.find(a => a.name === assetName);
           const assetBalance = asset?.balance || 0;
-          const assetId = asset?.id;
+         const assetId = asset?.id || Date.now();
           const totalNeedAmount = Math.max(0, totalAmount - assetBalance);
           
           // 색상 선택 (모든 자산이 동일한 연한 파스텔 분홍색)
