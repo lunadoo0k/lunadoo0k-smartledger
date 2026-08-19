@@ -4014,9 +4014,12 @@ class SmartLedger {
         Object.entries(assetGroups).forEach(([assetName, fixedExpenses]) => {
   const totalAmount = fixedExpenses.reduce((sum, f) => sum + f.amount, 0);
   const asset = this.assets?.find(a => a.name === assetName);
-  const assetBalance = asset?.balance || 0;  // ✅ 자산 없으면 0
-  const assetId = asset?.id;  // ✅ 자산 ID (또는 undefined)
-          const totalNeedAmount = Math.max(0, totalAmount - assetBalance);
+  
+  if (!asset) return;  // ✅ 자산이 없으면 스킵
+  
+  const assetBalance = asset.balance || 0;
+  const assetId = String(asset.id);  // ✅ 숫자를 문자열로 변환!
+  const totalNeedAmount = Math.max(0, totalAmount - assetBalance);
           
           // 색상 선택 (모든 자산이 동일한 연한 파스텔 분홍색)
           const color = assetColor;
