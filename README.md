@@ -17,9 +17,24 @@
 
 ---
 
-## ✨ 최신 업데이트 (2026-08-18)
+## ✨ 최신 업데이트 (2026-08-19)
 
 ### 🔧 버그 수정 및 개선
+
+- ✅ 고정비 0원 수정 가능 (조건식 !amount → amount < 0)
+- ✅ saveFixedExpense() 함수 수정 (줄 3762)
+- ✅ saveFixedEdit() 함수 수정 (줄 3831)
+- ✅ 고정비탭 자산금액 수정 미동작 해결
+
+📋 상세 내용
+**Issue #1: 0원 수정 제한 제거** ✅ 완료
+**Issue #2: 자산금액 수정 미동작** ✅ 완료
+
+---
+
+## ✨ 이전 업데이트 (2026-08-18)
+
+### 🔧 버그 수정 및 개선 
 - ✅ exportData 함수 수정 (usedTrades 데이터 포함)
 - ✅ handleImportFile 함수 수정 (usedTrades 로드 기능)
 - ✅ localStorage key 일치 (smartLedger)
